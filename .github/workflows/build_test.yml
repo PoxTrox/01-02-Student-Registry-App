@@ -21,5 +21,7 @@ jobs:
         node-version: 20
     - name: Install node modules
       run: npm install
+    - name: Execute static security tests
+      run: npm audit fix --force
     - name: Execute integration test
       run: npm test
